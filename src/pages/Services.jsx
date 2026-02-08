@@ -10,93 +10,30 @@ import {
   UserCheck,
   GraduationCap,
   Utensils,
-  BedDouble,
   UsersRound,
   MapPin,
-  Building,
   Compass,
-  Brain,
-  HeartPulse,
   ArrowRight
 } from "lucide-react";
+import { base44 } from "@/api/base44Client";
+import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "../utils";
 import CTABanner from "../components/home/CTABanner";
 
-const SERVICES = [
-  {
-    icon: Stethoscope,
-    title: "Complex Nursing Care",
-    desc: "Tracheostomy care, indwelling catheter (IDC) care, suprapubic catheter (SPC) care, stoma care, PEG feeding, palliative nursing, pressure area prevention, and continence assessments/care by qualified nurses.",
-    color: "teal"
-  },
-  {
-    icon: HandHelping,
-    title: "Wound Care",
-    desc: "Comprehensive wound care including complex wound management, dressing changes, and pressure injury prevention delivered by experienced nurses.",
-    color: "orange"
-  },
-  {
-    icon: UserCheck,
-    title: "Support Worker Services",
-    desc: "Dedicated support workers to assist with personal care, daily activities, and community participation with dignity and respect.",
-    color: "teal"
-  },
-  {
-    icon: Utensils,
-    title: "Medication Administration",
-    desc: "Safe medication administration and management by registered nurses, ensuring correct dosages and adherence to treatment plans.",
-    color: "orange"
-  },
-  {
-    icon: Compass,
-    title: "Support Coordination",
-    desc: "Expert guidance to help you navigate the NDIS, maximise your plan, and connect with the right providers and services.",
-    color: "teal"
-  },
-  {
-    icon: Car,
-    title: "Travel & Transport",
-    desc: "Community access support, social visits, and transport assistance to allied health appointments and community activities.",
-    color: "orange"
-  },
-  {
-    icon: Home,
-    title: "Cleaning Services",
-    desc: "Professional cleaning support to maintain a comfortable and hygienic living environment in your home.",
-    color: "teal"
-  },
-  {
-    icon: GraduationCap,
-    title: "Development of Life Skills",
-    desc: "Building independence through structured skill development programs covering daily living skills, communication, and personal growth.",
-    color: "orange"
-  },
-  {
-    icon: ArrowRightLeft,
-    title: "Hospital to Community Transition",
-    desc: "Smooth transition support from hospital back to home, ensuring continuity of care and proper setup of home nursing needs.",
-    color: "teal"
-  },
-  {
-    icon: UsersRound,
-    title: "Personal Activities Support",
-    desc: "Assistance with personal activities including grooming, meal preparation, communication, and maintaining personal independence.",
-    color: "orange"
-  },
-  {
-    icon: Utensils,
-    title: "Household Tasks",
-    desc: "Support with housework, laundry, meal preparation, shopping, and home maintenance to ensure a comfortable living environment.",
-    color: "teal"
-  },
-  {
-    icon: MapPin,
-    title: "Community Access",
-    desc: "Support to participate in community events, recreational activities, volunteering, and social outings that enrich your life.",
-    color: "orange"
-  },
-];
+const iconMap = {
+  Stethoscope,
+  HandHelping,
+  ArrowRightLeft,
+  Car,
+  Home,
+  UserCheck,
+  GraduationCap,
+  Utensils,
+  UsersRound,
+  MapPin,
+  Compass
+};
 
 const colorMap = {
   teal: {
@@ -112,6 +49,11 @@ const colorMap = {
 };
 
 export default function Services() {
+  const { data: services = [] } = useQuery({
+    queryKey: ['services'],
+    queryFn: () => base44.entities.Service.list('order'),
+  });
+
   return (
     <div>
       <PageBanner
@@ -132,7 +74,8 @@ export default function Services() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {SERVICES.map((service, i) => {
+            {services.map((service, i) => {
+              const IconComponent = iconMap[service.icon] || Stethoscope;
               const colors = colorMap[service.color];
               return (
                 <motion.div
@@ -144,10 +87,10 @@ export default function Services() {
                   className={`group p-7 rounded-2xl border border-gray-100 ${colors.border} hover:shadow-xl transition-all duration-300`}
                 >
                   <div className={`w-14 h-14 rounded-xl ${colors.icon} flex items-center justify-center mb-5 transition-all duration-300`}>
-                    <service.icon className="w-7 h-7" />
+                    <IconComponent className="w-7 h-7" />
                   </div>
                   <h3 className="font-bold text-lg text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">{service.desc}</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">{service.description}</p>
                 </motion.div>
               );
             })}

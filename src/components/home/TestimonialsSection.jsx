@@ -1,33 +1,21 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
-
-const TESTIMONIALS = [
-  {
-    name: "Sarah M.",
-    role: "NDIS Participant",
-    text: "The team at NDIS CarePlus has been incredible. Their nurses are not only skilled but genuinely caring. They've helped me achieve independence I never thought possible.",
-    rating: 5,
-  },
-  {
-    name: "James T.",
-    role: "Family Member",
-    text: "Finding quality NDIS support was stressful until we found NDIS CarePlus. Their personalised approach and consistent communication gave our family real peace of mind.",
-    rating: 5,
-  },
-  {
-    name: "Maria L.",
-    role: "Support Coordinator",
-    text: "I've referred many participants to NDIS CarePlus and the feedback is always overwhelmingly positive. Professional, reliable, and truly passionate about what they do.",
-    rating: 5,
-  },
-];
+import { base44 } from "@/api/base44Client";
+import { useQuery } from "@tanstack/react-query";
 
 export default function TestimonialsSection() {
   const [current, setCurrent] = useState(0);
+  
+  const { data: testimonials = [] } = useQuery({
+    queryKey: ['testimonials'],
+    queryFn: () => base44.entities.Testimonial.filter({ is_active: true }, 'order'),
+  });
 
-  const next = () => setCurrent((c) => (c + 1) % TESTIMONIALS.length);
-  const prev = () => setCurrent((c) => (c - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+  const next = () => setCurrent((c) => (c + 1) % testimonials.length);
+  const prev = () => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
+
+  if (testimonials.length === 0) return null;
 
   return (
     <section className="py-20 md:py-28 bg-gradient-to-br from-teal-50/50 to-white">
@@ -56,19 +44,19 @@ export default function TestimonialsSection() {
               className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 sm:p-12 text-center relative"
             >
               <div className="flex justify-center gap-1 mb-6">
-                {Array.from({ length: TESTIMONIALS[current].rating }).map((_, i) => (
+                {Array.from({ length: testimonials[current].rating || 5 }).map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-orange-400 text-orange-400" />
                 ))}
               </div>
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed italic">
-                "{TESTIMONIALS[current].text}"
+                "{testimonials[current].text}"
               </p>
               <div className="mt-8">
                 <div className="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center text-white font-bold text-xl">
-                  {TESTIMONIALS[current].name[0]}
+                  {testimonials[current].name[0]}
                 </div>
-                <div className="mt-3 font-bold text-gray-900">{TESTIMONIALS[current].name}</div>
-                <div className="text-sm text-gray-400">{TESTIMONIALS[current].role}</div>
+                <div className="mt-3 font-bold text-gray-900">{testimonials[current].name}</div>
+                <div className="text-sm text-gray-400">{testimonials[current].role}</div>
               </div>
             </motion.div>
           </AnimatePresence>
@@ -82,7 +70,7 @@ export default function TestimonialsSection() {
               <ChevronLeft className="w-5 h-5 text-gray-600" />
             </button>
             <div className="flex items-center gap-2">
-              {TESTIMONIALS.map((_, i) => (
+              {testimonials.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setCurrent(i)}

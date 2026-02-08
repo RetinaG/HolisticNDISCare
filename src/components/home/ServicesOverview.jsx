@@ -11,59 +11,27 @@ import {
   UserCheck,
   GraduationCap,
   Utensils,
-  ArrowRight
+  ArrowRight,
+  Compass,
+  UsersRound,
+  MapPin
 } from "lucide-react";
+import { base44 } from "@/api/base44Client";
+import { useQuery } from "@tanstack/react-query";
 
-const SERVICES = [
-  {
-    icon: Stethoscope,
-    title: "Complex Nursing Care",
-    desc: "Tracheostomy, catheter care, stoma care, PEG feeding, wound care, palliative nursing.",
-    color: "teal"
-  },
-  {
-    icon: HandHelping,
-    title: "Personal Activities Support",
-    desc: "Assistance with personal activities and household tasks with dignity and care.",
-    color: "orange"
-  },
-  {
-    icon: Car,
-    title: "Travel & Transport",
-    desc: "Community access, social visits, and transport to allied health appointments.",
-    color: "teal"
-  },
-  {
-    icon: UserCheck,
-    title: "Support Coordination",
-    desc: "Helping you navigate the NDIS and connect with the right services.",
-    color: "orange"
-  },
-  {
-    icon: Home,
-    title: "Cleaning Services",
-    desc: "Professional cleaning support to maintain a comfortable living environment.",
-    color: "teal"
-  },
-  {
-    icon: GraduationCap,
-    title: "Development of Life Skills",
-    desc: "Building independence and capability through skill development programs.",
-    color: "orange"
-  },
-  {
-    icon: ArrowRightLeft,
-    title: "Hospital to Home Transition",
-    desc: "Smooth transition support from hospital back to community living.",
-    color: "teal"
-  },
-  {
-    icon: Utensils,
-    title: "Medication Management",
-    desc: "Safe medication administration and management by qualified nurses.",
-    color: "orange"
-  },
-];
+const iconMap = {
+  Stethoscope,
+  HandHelping,
+  ArrowRightLeft,
+  Car,
+  Home,
+  UserCheck,
+  GraduationCap,
+  Utensils,
+  Compass,
+  UsersRound,
+  MapPin
+};
 
 const colorMap = {
   teal: {
@@ -81,6 +49,11 @@ const colorMap = {
 };
 
 export default function ServicesOverview() {
+  const { data: services = [] } = useQuery({
+    queryKey: ['services-home'],
+    queryFn: () => base44.entities.Service.filter({ show_on_home: true }, 'order'),
+  });
+
   return (
     <section className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -101,7 +74,8 @@ export default function ServicesOverview() {
 
         {/* Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {SERVICES.map((service, i) => {
+          {services.map((service, i) => {
+            const IconComponent = iconMap[service.icon] || Stethoscope;
             const colors = colorMap[service.color];
             return (
               <motion.div
@@ -116,10 +90,10 @@ export default function ServicesOverview() {
                   className={`group block p-6 rounded-2xl border border-gray-100 ${colors.border} hover:shadow-xl transition-all duration-300 h-full`}
                 >
                   <div className={`w-14 h-14 rounded-xl ${colors.icon} ${colors.hover} flex items-center justify-center mb-5 transition-all duration-300`}>
-                    <service.icon className="w-7 h-7" />
+                    <IconComponent className="w-7 h-7" />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">{service.desc}</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">{service.description}</p>
                   <div className="mt-4 flex items-center text-sm font-medium text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </div>

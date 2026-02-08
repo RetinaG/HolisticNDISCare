@@ -51,6 +51,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Admin from './pages/Admin';
 import __Layout from './Layout.jsx';
 
 
@@ -59,6 +60,7 @@ export const PAGES = {
     "About": About,
     "Services": Services,
     "Contact": Contact,
+    "Admin": Admin,
 }
 
 export const pagesConfig = {
