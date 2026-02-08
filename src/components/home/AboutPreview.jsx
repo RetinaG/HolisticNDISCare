@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight } from "lucide-react";
 
 const FEATURES = [
-  "Highly skilled and experienced nursing staff",
-  "Compassionate, person-centred approach",
-  "Culturally diverse and inclusive team",
-  "Tailored support plans for individual needs",
+  "Owned and run by 2 experienced nurses",
+  "Over 20 years combined nursing experience",
+  "Family-like care with professional standards",
+  "Serving Brisbane Northside, Logan, Ipswich, Bayside & South West",
   "NDIS registered and fully compliant",
 ];
 
@@ -51,15 +51,15 @@ export default function AboutPreview() {
             transition={{ duration: 0.6 }}
           >
             <div className="inline-block px-4 py-1 bg-teal-50 text-teal-700 text-sm font-semibold rounded-full mb-4">
-              Welcome To NDIS CarePlus
+              Welcome To Holistic NDIS Care
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
-              Disability Support with{" "}
-              <span className="text-orange-500">Professionalism</span> &{" "}
-              <span className="text-teal-600">Compassion</span>
+              Support with{" "}
+              <span className="text-orange-500">Experience</span> &{" "}
+              <span className="text-teal-600">Heart</span>
             </h2>
             <p className="mt-5 text-gray-500 leading-relaxed">
-              We are more than a care organisation. We are your partners in achieving independence and well-being. Our evidence-based, tailored approach ensures your choices are valued and our care positively impacts your life.
+              We have seen firsthand how difficult daily life can be for many individuals and their loved ones. We believe that with the right support, people can live fulfilling and independent lives. Our mission is to make them feel heard, respected, and empowered — because no one should feel alone on their journey.
             </p>
             <ul className="mt-6 space-y-3">
               {FEATURES.map((f) => (

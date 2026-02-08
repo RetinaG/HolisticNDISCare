@@ -26,10 +26,10 @@ export default function CTABanner() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href="tel:1800000000"
+              href="tel:0420671136"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-white text-teal-700 font-bold text-lg hover:bg-gray-50 shadow-xl transition-all"
             >
-              <Phone className="w-5 h-5" /> 1800 000 000
+              <Phone className="w-5 h-5" /> 0420 671 136
             </a>
             <Link
               to={createPageUrl("Contact")}

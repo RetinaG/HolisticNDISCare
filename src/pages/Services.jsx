@@ -26,93 +26,75 @@ import CTABanner from "../components/home/CTABanner";
 const SERVICES = [
   {
     icon: Stethoscope,
-    title: "Community Nursing Care",
-    desc: "Our registered nurses provide extensive clinical care including wound management, medication administration, catheter care, PEG feeding, and health monitoring to help you manage your condition and accelerate recovery.",
+    title: "Complex Nursing Care",
+    desc: "Tracheostomy care, indwelling catheter (IDC) care, suprapubic catheter (SPC) care, stoma care, PEG feeding, palliative nursing, pressure area prevention, and continence assessments/care by qualified nurses.",
     color: "teal"
   },
   {
     icon: HandHelping,
-    title: "Assist Personal Care – High Intensity",
-    desc: "For participants with high support needs, we provide personalised assistance with personal hygiene, grooming, dressing, and other daily personal activities with dignity and respect.",
+    title: "Wound Care",
+    desc: "Comprehensive wound care including complex wound management, dressing changes, and pressure injury prevention delivered by experienced nurses.",
     color: "orange"
-  },
-  {
-    icon: ArrowRightLeft,
-    title: "Assist-Life Stage Transition",
-    desc: "We support you through major life transitions, helping you adapt to changes in your NDIS plan and access new services, housing, and community connections.",
-    color: "teal"
-  },
-  {
-    icon: Car,
-    title: "Assist Travel & Transport",
-    desc: "Our support workers help you travel safely to appointments, social activities, and community events using mobility aids and accessible transport options.",
-    color: "orange"
-  },
-  {
-    icon: Home,
-    title: "Daily Tasks & Shared Living",
-    desc: "Support with everyday routines in shared living environments, ensuring you maintain independence while having assistance with household and personal tasks.",
-    color: "teal"
   },
   {
     icon: UserCheck,
-    title: "Assist Personal Activities",
-    desc: "Comprehensive support for daily personal activities including meal preparation, communication, mobility, and community participation tailored to your needs.",
-    color: "orange"
-  },
-  {
-    icon: GraduationCap,
-    title: "Development & Life Skills",
-    desc: "Building your independence through structured skill development programs covering budgeting, cooking, social skills, and other essential life competencies.",
+    title: "Support Worker Services",
+    desc: "Dedicated support workers to assist with personal care, daily activities, and community participation with dignity and respect.",
     color: "teal"
   },
   {
     icon: Utensils,
-    title: "Household Tasks",
-    desc: "Practical support with housework, laundry, meal preparation, shopping, and home maintenance to help you maintain a comfortable living environment.",
+    title: "Medication Administration",
+    desc: "Safe medication administration and management by registered nurses, ensuring correct dosages and adherence to treatment plans.",
     color: "orange"
   },
   {
-    icon: Brain,
-    title: "Therapeutic Supports",
-    desc: "Evidence-based therapeutic interventions including occupational therapy, speech therapy, physiotherapy, and behavioural support from qualified professionals.",
+    icon: Compass,
+    title: "Support Coordination",
+    desc: "Expert guidance to help you navigate the NDIS, maximise your plan, and connect with the right providers and services.",
     color: "teal"
   },
   {
-    icon: Building,
-    title: "Specialised Disability Housing",
-    desc: "Access to purpose-built or modified housing designed to meet your specific needs, with 24/7 support available to ensure your comfort and safety.",
+    icon: Car,
+    title: "Travel & Transport",
+    desc: "Community access support, social visits, and transport assistance to allied health appointments and community activities.",
     color: "orange"
   },
   {
+    icon: Home,
+    title: "Cleaning Services",
+    desc: "Professional cleaning support to maintain a comfortable and hygienic living environment in your home.",
+    color: "teal"
+  },
+  {
+    icon: GraduationCap,
+    title: "Development of Life Skills",
+    desc: "Building independence through structured skill development programs covering daily living skills, communication, and personal growth.",
+    color: "orange"
+  },
+  {
+    icon: ArrowRightLeft,
+    title: "Hospital to Community Transition",
+    desc: "Smooth transition support from hospital back to home, ensuring continuity of care and proper setup of home nursing needs.",
+    color: "teal"
+  },
+  {
     icon: UsersRound,
-    title: "Group & Centre Activities",
-    desc: "Engaging group programs and centre-based activities that promote social connection, skill development, and community participation.",
+    title: "Personal Activities Support",
+    desc: "Assistance with personal activities including grooming, meal preparation, communication, and maintaining personal independence.",
+    color: "orange"
+  },
+  {
+    icon: Utensils,
+    title: "Household Tasks",
+    desc: "Support with housework, laundry, meal preparation, shopping, and home maintenance to ensure a comfortable living environment.",
     color: "teal"
   },
   {
     icon: MapPin,
     title: "Community Access",
-    desc: "Support to participate in community events, recreational activities, volunteering, and social outings that enrich your life experience.",
+    desc: "Support to participate in community events, recreational activities, volunteering, and social outings that enrich your life.",
     color: "orange"
-  },
-  {
-    icon: BedDouble,
-    title: "Respite Care",
-    desc: "Short-term accommodation and support giving both you and your carers a well-deserved break while ensuring continuity of high-quality care.",
-    color: "teal"
-  },
-  {
-    icon: Compass,
-    title: "Support Coordination",
-    desc: "Expert guidance to help you understand, navigate, and maximise your NDIS plan, connecting you with the right providers and services.",
-    color: "orange"
-  },
-  {
-    icon: HeartPulse,
-    title: "Psychosocial Recovery",
-    desc: "Specialised support for participants with psychosocial disabilities, focused on recovery-oriented practices and building resilience.",
-    color: "teal"
   },
 ];
 

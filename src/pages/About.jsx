@@ -54,17 +54,17 @@ export default function About() {
                 Who We Are
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
-                We Remove Limitations &{" "}
-                <span className="text-teal-600">Unlock Potentials</span>
+                Nurse-Owned &{" "}
+                <span className="text-teal-600">Family-Focused Care</span>
               </h2>
               <p className="mt-5 text-gray-500 leading-relaxed">
-                As an NDIS service provider, NDIS CarePlus delivers a comprehensive range of support services to people with disabilities. We believe every participant should be able to live the life they choose, regardless of the challenges they face.
+                Holistic NDIS Care is owned and run by two experienced nurses with over 20 years of combined experience in nursing and caring for vulnerable people. We have seen firsthand how difficult daily life can be for many individuals and their loved ones.
               </p>
               <p className="mt-4 text-gray-500 leading-relaxed">
-                Our support workers consider participants as extended family members, providing care with warmth, compassion and empathy — not just mere professionalism. This affectionate approach makes all the difference.
+                We strive to provide family-like care that is backed by experienced nurses and best practice standards. We believe that with the right support, people can live fulfilling and independent lives.
               </p>
               <p className="mt-4 text-gray-500 leading-relaxed">
-                Our team comes from different ethnic, cultural and religious backgrounds, helping us assist participants from every sphere of society. We have the resources, knowledge, and skills to cater to the various complexities of NDIS.
+                Our mission is to make you feel heard, respected, and empowered — because no one should feel alone on their journey. We navigate everyday challenges with care and empathy, treating every participant like family.
               </p>
             </motion.div>
 

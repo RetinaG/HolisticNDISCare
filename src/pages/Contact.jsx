@@ -10,21 +10,23 @@ import { Label } from "@/components/ui/label";
 import { base44 } from "@/api/base44Client";
 
 const CONTACT_INFO = [
-  { icon: Phone, label: "Phone", value: "1800 000 000", href: "tel:1800000000" },
-  { icon: Mail, label: "Email", value: "info@ndiscareplus.com.au", href: "mailto:info@ndiscareplus.com.au" },
-  { icon: MapPin, label: "Address", value: "Sydney, NSW Australia" },
+  { icon: Phone, label: "Phone", value: "0420 671 136", href: "tel:0420671136" },
+  { icon: Mail, label: "Email", value: "holisticndiscare@gmail.com", href: "mailto:holisticndiscare@gmail.com" },
+  { icon: MapPin, label: "Service Areas", value: "Brisbane Northside, Logan, Ipswich, Bayside, Brisbane South West" },
   { icon: Clock, label: "Hours", value: "Mon – Sun: 8am – 6pm" },
 ];
 
 const SERVICES_LIST = [
-  "Community Nursing Care",
-  "Personal Care",
-  "Life Stage Transition",
-  "Travel & Transport",
-  "Daily Tasks & Shared Living",
-  "Therapeutic Supports",
-  "Respite Care",
+  "Complex Nursing Care",
+  "Wound Care",
+  "Medication Management",
   "Support Coordination",
+  "Travel & Transport",
+  "Cleaning Services",
+  "Support Worker",
+  "Life Skills Development",
+  "Hospital to Home Transition",
+  "Personal Activities",
   "Other",
 ];
 
@@ -95,7 +97,7 @@ export default function Contact() {
               {/* Map placeholder */}
               <div className="mt-10 rounded-2xl overflow-hidden border border-gray-200 shadow-sm h-52 bg-gray-100">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d424146.10282271104!2d150.65178890609882!3d-33.84735716799999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b129838f39a743f%3A0x3017d681632a850!2sSydney%20NSW%2C%20Australia!5e0!3m2!1sen!2s!4v1600000000000!5m2!1sen!2s"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1829169.0!2d152.9!3d-27.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b93b5bbda44b7db%3A0x4a1e0e9ce1f6c9e9!2sBrisbane%20QLD!5e0!3m2!1sen!2sau!4v1600000000000!5m2!1sen!2sau"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

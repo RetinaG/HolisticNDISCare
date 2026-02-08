@@ -17,50 +17,50 @@ import {
 const SERVICES = [
   {
     icon: Stethoscope,
-    title: "Community Nursing Care",
-    desc: "Extensive clinical care to manage health conditions and accelerate recovery.",
+    title: "Complex Nursing Care",
+    desc: "Tracheostomy, catheter care, stoma care, PEG feeding, wound care, palliative nursing.",
     color: "teal"
   },
   {
     icon: HandHelping,
-    title: "Personal Care – High Intensity",
-    desc: "Personalised support for participants with high-level care needs.",
+    title: "Personal Activities Support",
+    desc: "Assistance with personal activities and household tasks with dignity and care.",
     color: "orange"
-  },
-  {
-    icon: ArrowRightLeft,
-    title: "Life Stage Transition",
-    desc: "Helping you adapt to changes and navigate new life phases smoothly.",
-    color: "teal"
   },
   {
     icon: Car,
     title: "Travel & Transport",
-    desc: "Assistance with mobility aids and travel to your chosen destinations.",
-    color: "orange"
-  },
-  {
-    icon: Home,
-    title: "Daily Tasks & Shared Living",
-    desc: "Support with daily routines and shared living arrangements.",
+    desc: "Community access, social visits, and transport to allied health appointments.",
     color: "teal"
   },
   {
     icon: UserCheck,
-    title: "Therapeutic Supports",
-    desc: "Evidence-based therapeutic interventions for your wellbeing.",
+    title: "Support Coordination",
+    desc: "Helping you navigate the NDIS and connect with the right services.",
     color: "orange"
   },
   {
+    icon: Home,
+    title: "Cleaning Services",
+    desc: "Professional cleaning support to maintain a comfortable living environment.",
+    color: "teal"
+  },
+  {
     icon: GraduationCap,
-    title: "Development & Life Skills",
-    desc: "Building independence through skill development and training.",
+    title: "Development of Life Skills",
+    desc: "Building independence and capability through skill development programs.",
+    color: "orange"
+  },
+  {
+    icon: ArrowRightLeft,
+    title: "Hospital to Home Transition",
+    desc: "Smooth transition support from hospital back to community living.",
     color: "teal"
   },
   {
     icon: Utensils,
-    title: "Household Tasks",
-    desc: "Help with housework, meal preparation, and home maintenance.",
+    title: "Medication Management",
+    desc: "Safe medication administration and management by qualified nurses.",
     color: "orange"
   },
 ];

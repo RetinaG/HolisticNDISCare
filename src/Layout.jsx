@@ -45,11 +45,11 @@ export default function Layout({ children, currentPageName }) {
       <div className="hidden md:block bg-teal-700 text-white text-sm">
         <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <a href="tel:1800000000" className="flex items-center gap-2 hover:text-orange-300 transition-colors">
-              <Phone className="w-3.5 h-3.5" /> 1800 000 000
+            <a href="tel:0420671136" className="flex items-center gap-2 hover:text-orange-300 transition-colors">
+              <Phone className="w-3.5 h-3.5" /> 0420 671 136
             </a>
-            <a href="mailto:info@ndiscareplus.com.au" className="flex items-center gap-2 hover:text-orange-300 transition-colors">
-              <Mail className="w-3.5 h-3.5" /> info@ndiscareplus.com.au
+            <a href="mailto:holisticndiscare@gmail.com" className="flex items-center gap-2 hover:text-orange-300 transition-colors">
+              <Mail className="w-3.5 h-3.5" /> holisticndiscare@gmail.com
             </a>
           </div>
           <div className="flex items-center gap-2">
@@ -65,13 +65,14 @@ export default function Layout({ children, currentPageName }) {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to={createPageUrl("Home")} className="flex items-center gap-3 group">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-                <Heart className="w-6 h-6 text-white" />
-              </div>
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698816c8974c10bb3e401113/e90c0ae61_6b8f8e73-b136-4c00-a2af-5e5f053f246d.jpeg"
+                alt="Holistic NDIS Care Logo"
+                className="h-14 w-auto"
+              />
               <div className="leading-tight">
-                <span className="text-xl font-bold text-gray-900 tracking-tight">NDIS Care</span>
-                <span className="text-xl font-bold text-orange-500 tracking-tight">Plus</span>
-                <div className="text-[10px] uppercase tracking-[0.2em] text-teal-600 font-semibold">Nursing Services</div>
+                <span className="text-xl font-bold text-teal-700 tracking-tight">HOLISTIC NDIS CARE</span>
+                <div className="text-[10px] uppercase tracking-[0.15em] text-teal-500 font-medium">Care That Feels Like Family</div>
               </div>
             </Link>
 
@@ -150,8 +151,8 @@ export default function Layout({ children, currentPageName }) {
                   </Link>
                 </div>
                 <div className="pt-3 border-t mt-3 space-y-2 text-sm text-gray-500">
-                  <a href="tel:1800000000" className="flex items-center gap-2"><Phone className="w-4 h-4" /> 1800 000 000</a>
-                  <a href="mailto:info@ndiscareplus.com.au" className="flex items-center gap-2"><Mail className="w-4 h-4" /> info@ndiscareplus.com.au</a>
+                  <a href="tel:0420671136" className="flex items-center gap-2"><Phone className="w-4 h-4" /> 0420 671 136</a>
+                  <a href="mailto:holisticndiscare@gmail.com" className="flex items-center gap-2"><Mail className="w-4 h-4" /> holisticndiscare@gmail.com</a>
                 </div>
               </div>
             </motion.div>
@@ -169,16 +170,17 @@ export default function Layout({ children, currentPageName }) {
             {/* Brand */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center">
-                  <Heart className="w-5 h-5 text-white" />
-                </div>
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698816c8974c10bb3e401113/e90c0ae61_6b8f8e73-b136-4c00-a2af-5e5f053f246d.jpeg"
+                  alt="Holistic NDIS Care"
+                  className="h-10 w-auto"
+                />
                 <div>
-                  <span className="text-lg font-bold text-white">NDIS Care</span>
-                  <span className="text-lg font-bold text-orange-400">Plus</span>
+                  <span className="text-lg font-bold text-white">Holistic NDIS Care</span>
                 </div>
               </div>
               <p className="text-sm leading-relaxed text-gray-400">
-                Providing exceptional NDIS nursing and disability support services with compassion, professionalism, and dedication.
+                NDIS-registered provider dedicated to supporting individuals living with disabilities. Care that feels like family.
               </p>
               <div className="flex gap-3 mt-5">
                 {[Facebook, Instagram, Linkedin].map((Icon, i) => (
@@ -219,15 +221,15 @@ export default function Layout({ children, currentPageName }) {
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-3">
                   <Phone className="w-4 h-4 mt-0.5 text-teal-400 shrink-0" />
-                  <a href="tel:1800000000" className="hover:text-teal-400 transition-colors">1800 000 000</a>
+                  <a href="tel:0420671136" className="hover:text-teal-400 transition-colors">0420 671 136</a>
                 </li>
                 <li className="flex items-start gap-3">
                   <Mail className="w-4 h-4 mt-0.5 text-teal-400 shrink-0" />
-                  <a href="mailto:info@ndiscareplus.com.au" className="hover:text-teal-400 transition-colors">info@ndiscareplus.com.au</a>
+                  <a href="mailto:holisticndiscare@gmail.com" className="hover:text-teal-400 transition-colors">holisticndiscare@gmail.com</a>
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 mt-0.5 text-teal-400 shrink-0" />
-                  <span>Sydney, NSW Australia</span>
+                  <span>Brisbane Northside, Logan, Ipswich, Bayside & South West</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Clock className="w-4 h-4 mt-0.5 text-teal-400 shrink-0" />
@@ -238,10 +240,10 @@ export default function Layout({ children, currentPageName }) {
           </div>
         </div>
         <div className="border-t border-gray-800">
-          <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500">
-            <p>© 2026 NDIS CarePlus Nursing Services. All rights reserved.</p>
-            <p>Registered NDIS Provider</p>
-          </div>
+        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500">
+          <p>© 2026 Holistic NDIS Care. All rights reserved. ABN: 93 674 900 737</p>
+          <p>Registered NDIS Provider</p>
+        </div>
         </div>
       </footer>
     </div>

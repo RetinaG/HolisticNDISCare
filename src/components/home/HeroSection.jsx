@@ -35,12 +35,11 @@ export default function HeroSection() {
               Registered NDIS Provider
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] tracking-tight">
-              Exceptional
-              <span className="block text-teal-600">Nursing Care</span>
-              <span className="block">& Support</span>
+              <span className="block text-teal-600">Care That Feels</span>
+              <span className="block">Like Family</span>
             </h1>
             <p className="mt-6 text-lg text-gray-500 leading-relaxed max-w-lg">
-              Empowering NDIS participants with compassionate, professional nursing and disability support services. We walk with you every step of the way.
+              Owned and run by two experienced nurses with over 20 years of combined nursing experience. We provide family-like care backed by best practice standards.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
@@ -60,9 +59,9 @@ export default function HeroSection() {
             {/* Stats */}
             <div className="mt-12 flex gap-8 sm:gap-12">
               {[
-                { value: "500+", label: "Participants Supported" },
-                { value: "50+", label: "Qualified Nurses" },
-                { value: "24/7", label: "Support Available" },
+                { value: "20+", label: "Years Experience" },
+                { value: "5+", label: "Service Regions" },
+                { value: "100%", label: "Nurse-Owned" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="text-2xl sm:text-3xl font-bold text-gray-900">{stat.value}</div>
