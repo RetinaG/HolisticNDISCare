@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
-import { base44 } from "@/api/base44Client";
+
 
 const CONTACT_INFO = [
   { icon: Phone, label: "Phone", value: "0420 671 136", href: "tel:0420671136" },
@@ -40,16 +40,11 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
-    await base44.entities.ContactInquiry.create({
-      name: form.name,
-      email: form.email,
-      phone: form.phone,
-      service: form.service,
-      message: form.message,
-      status: "new",
-    });
-    setSending(false);
-    setSent(true);
+    // Simulate form submission
+    setTimeout(() => {
+      setSending(false);
+      setSent(true);
+    }, 1000);
   };
 
   return (

@@ -15,8 +15,7 @@ import {
   Compass,
   ArrowRight
 } from "lucide-react";
-import { base44 } from "@/api/base44Client";
-import { useQuery } from "@tanstack/react-query";
+import { SERVICES } from "../data/staticData";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "../utils";
 import CTABanner from "../components/home/CTABanner";
@@ -49,10 +48,7 @@ const colorMap = {
 };
 
 export default function Services() {
-  const { data: services = [] } = useQuery({
-    queryKey: ['services'],
-    queryFn: () => base44.entities.Service.list('order'),
-  });
+  const services = SERVICES;
 
   return (
     <div>

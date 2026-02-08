@@ -16,8 +16,7 @@ import {
   UsersRound,
   MapPin
 } from "lucide-react";
-import { base44 } from "@/api/base44Client";
-import { useQuery } from "@tanstack/react-query";
+import { SERVICES } from "../../data/staticData";
 
 const iconMap = {
   Stethoscope,

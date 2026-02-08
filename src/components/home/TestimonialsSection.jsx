@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { base44 } from "@/api/base44Client";
-import { useQuery } from "@tanstack/react-query";
+import { TESTIMONIALS } from "../../data/staticData";
 
 export default function TestimonialsSection() {
   const [current, setCurrent] = useState(0);

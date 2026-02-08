@@ -9,7 +9,6 @@ const NAV_ITEMS = [
   { label: "About Us", page: "About" },
   { label: "Our Services", page: "Services" },
   { label: "Contact", page: "Contact" },
-  { label: "Admin", page: "Admin" },
 ];
 
 export default function Layout({ children, currentPageName }) {
