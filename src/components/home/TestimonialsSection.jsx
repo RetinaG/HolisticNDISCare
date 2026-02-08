@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { TESTIMONIALS } from "../../data/staticData";
+import { TESTIMONIALS } from "../data/staticData";
 
 export default function TestimonialsSection() {
   const [current, setCurrent] = useState(0);
-  
-  const { data: testimonials = [] } = useQuery({
-    queryKey: ['testimonials'],
-    queryFn: () => base44.entities.Testimonial.filter({ is_active: true }, 'order'),
-  });
+  const testimonials = TESTIMONIALS.filter(t => t.is_active);
 
   const next = () => setCurrent((c) => (c + 1) % testimonials.length);
   const prev = () => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);

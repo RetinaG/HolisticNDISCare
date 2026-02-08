@@ -16,7 +16,7 @@ import {
   UsersRound,
   MapPin
 } from "lucide-react";
-import { SERVICES } from "../../data/staticData";
+import { SERVICES } from "../data/staticData";
 
 const iconMap = {
   Stethoscope,
@@ -48,10 +48,7 @@ const colorMap = {
 };
 
 export default function ServicesOverview() {
-  const { data: services = [] } = useQuery({
-    queryKey: ['services-home'],
-    queryFn: () => base44.entities.Service.filter({ show_on_home: true }, 'order'),
-  });
+  const services = SERVICES.filter(s => s.show_on_home);
 
   return (
     <section className="py-20 md:py-28 bg-white">
