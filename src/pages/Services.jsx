@@ -15,7 +15,7 @@ import {
   Compass,
   ArrowRight
 } from "lucide-react";
-import { SERVICES } from "../components/data/staticData";
+import { SERVICES } from "@/components/data/staticData";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "../utils";
 import CTABanner from "../components/home/CTABanner";
