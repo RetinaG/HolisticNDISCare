@@ -32,6 +32,35 @@ Run the app: `npm run dev`
 
 Open [Base44.com](http://Base44.com) and click on Publish.
 
+ Holistic NDIS Care Website
+
+A professional, responsive website for Holistic NDIS Care - an NDIS-registered provider in Brisbane.
+
+## Tech Stack
+- React 18, Tailwind CSS, Framer Motion
+- Base44 Platform (Backend as a Service)
+- Radix UI Components
+
+## Project Structure
+- `pages/` - Main pages (Home, About, Services, Contact, Admin)
+- `components/` - Reusable UI components
+- `entities/` - Database schemas
+- `Layout.js` - Navigation and footer
+
+## Business Details
+- ABN: 93 674 900 737
+- Phone: 0420 671 136
+- Email: holisticndiscare@gmail.com
+- Areas: Brisbane Northside, Logan, Ipswich, Bayside, South West
+
+## Features
+- Dynamic content management via Admin panel
+- Responsive mobile-first design
+- Contact form with inquiry tracking
+- Services showcase with database integration
+
+© 2026 Holistic NDIS Care. All rights reserved.
+
 **Docs & Support**
 
 Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
