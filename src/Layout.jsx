@@ -24,6 +24,7 @@ export default function Layout({ children, currentPageName }) {
 
   useEffect(() => {
     setMobileOpen(false);
+    window.scrollTo(0, 0);
   }, [currentPageName]);
 
   return (
