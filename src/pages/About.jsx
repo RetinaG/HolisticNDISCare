@@ -73,17 +73,25 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              <img
-  src="..."
-  alt="Healthcare professional"
-  className="w-full h-[450px] object-contain bg-gray-50"
+              className="relative"
             >
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698816c8974c10bb3e401113/d1a36fc73_file_00000000a64471fa9e257adeedfb0c72.png"
+                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700&h=500&fit=crop"
                   alt="Healthcare professional"
                   className="w-full h-[450px] object-cover"
                 />
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-5 border">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center">
+                    <Award className="w-6 h-6 text-teal-600" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900">10+ Years</div>
+                    <div className="text-sm text-gray-400">Of Excellence</div>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
