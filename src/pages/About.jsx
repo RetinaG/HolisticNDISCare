@@ -77,21 +77,8 @@ export default function About() {
 
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=700&h=500&fit=crop"
-                  alt="Nurse in scrubs with stethoscope" className="bg-slate-900 w-full h-[450px] object-contain" />
-
-
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-5 border">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center">
-                    <Award className="w-6 h-6 text-teal-600" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-gray-900">10+ Years</div>
-                    <div className="text-sm text-gray-400">Of Excellence</div>
-                  </div>
-                </div>
+                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700&h=500&fit=crop"
+                  alt="Healthcare professional providing community care" className="w-full h-[450px] object-cover" />
               </div>
             </motion.div>
           </div>
