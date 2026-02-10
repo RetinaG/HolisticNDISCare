@@ -27,8 +27,8 @@ export default function AboutPreview() {
           >
             <div className="rounded-3xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=700&h=500&fit=crop"
-                alt="Team of nurses"
+                src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=700&h=500&fit=crop"
+                alt="Nurse providing care in patient's home"
                 className="w-full h-[400px] object-cover"
               />
             </div>
