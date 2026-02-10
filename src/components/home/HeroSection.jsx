@@ -103,22 +103,7 @@ export default function HeroSection() {
                 </div>
               </div>
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1 }}
-              className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-xl p-4 border border-gray-100"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center">
-                  <Users className="w-5 h-5 text-teal-600" />
-                </div>
-                <div>
-                  <div className="text-sm font-bold text-gray-900">Multicultural Team</div>
-                  <div className="text-xs text-gray-400">Diverse & Inclusive</div>
-                </div>
-              </div>
-            </motion.div>
+
           </motion.div>
         </div>
       </div>
