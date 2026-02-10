@@ -78,7 +78,7 @@ export default function About() {
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698816c8974c10bb3e401113/01dd02209_ndis2.png"
-                  alt="Healthcare professional providing community care" className="w-full h-[450px] object-cover" />
+                  alt="Healthcare professional providing community care" className="w-full h-[450px] object-cover object-[center_35%]" />
               </div>
             </motion.div>
           </div>
