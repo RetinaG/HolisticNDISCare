@@ -79,7 +79,7 @@ export default function About() {
                 <img
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698816c8974c10bb3e401113/ddd16c491_file_00000000a64471fa9e257adeedfb0c72.png"
                   alt="Healthcare professional providing care"
-                  className="w-full h-[450px] object-cover object-top"
+                  className="w-full h-[450px] object-contain"
                 />
               </div>
             </motion.div>
