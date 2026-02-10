@@ -86,23 +86,7 @@ export default function HeroSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-teal-900/40 to-transparent" />
             </div>
-            {/* Floating Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-5 border border-gray-100"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center">
-                  <HeartHandshake className="w-6 h-6 text-orange-600" />
-                </div>
-                <div>
-                  <div className="font-bold text-gray-900">Trusted Provider</div>
-                  <div className="text-sm text-gray-500">NDIS Registered & Certified</div>
-                </div>
-              </div>
-            </motion.div>
+
 
           </motion.div>
         </div>
