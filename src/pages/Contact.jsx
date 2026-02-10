@@ -44,6 +44,17 @@ export default function Contact() {
     setSending(true);
     
     try {
+      // Save to database
+      await base44.entities.ContactInquiry.create({
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        service: form.service || "Other",
+        message: form.message,
+        status: "new"
+      });
+
+      // Send email notification
       await base44.integrations.Core.SendEmail({
         to: "holisticndiscare@gmail.com",
         subject: `New Contact Form Submission - ${form.service || 'General Inquiry'}`,
@@ -63,6 +74,7 @@ export default function Contact() {
     } catch (error) {
       setSending(false);
       toast.error("Failed to send message. Please try again or call us directly.");
+      console.error(error);
     }
   };
 
