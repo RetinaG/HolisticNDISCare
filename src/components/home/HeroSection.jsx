@@ -82,7 +82,7 @@ export default function HeroSection() {
               <img
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698816c8974c10bb3e401113/65645d540_NDISpic.png"
                 alt="Nurse providing care to patient at home"
-                className="w-full h-[400px] sm:h-[500px] object-contain"
+                className="w-full h-[400px] sm:h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-teal-900/40 to-transparent" />
             </div>
