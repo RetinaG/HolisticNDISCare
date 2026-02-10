@@ -32,13 +32,6 @@ export default function AboutPreview() {
                 className="w-full h-[400px] object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-40 h-40 rounded-2xl overflow-hidden shadow-lg border-4 border-white hidden sm:block">
-              <img
-                src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=300&h=300&fit=crop"
-                alt="Caring support"
-                className="w-full h-full object-cover"
-              />
-            </div>
             {/* Accent */}
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-teal-500/10 rounded-full blur-xl" />
           </motion.div>
