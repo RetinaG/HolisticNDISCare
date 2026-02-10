@@ -1,91 +1,123 @@
 // Static data for the website
 export const SERVICES = [
   {
-    title: "Community Nursing Care",
-    description: "Professional nursing support for complex medical needs, wound care, medication management, and health monitoring in your home.",
+    title: "Complex Nursing Care",
+    description: "Expert registered nurse support for complex health conditions including chronic disease management, PEG feeding, tracheostomy care, catheter management, and ventilator support in your home.",
     icon: "Stethoscope",
     color: "teal",
     order: 1,
     show_on_home: true
   },
   {
-    title: "Personal Care",
-    description: "Assistance with daily activities including showering, dressing, grooming, and maintaining personal hygiene with dignity and respect.",
+    title: "Wound Care & Management",
+    description: "Specialized wound assessment, dressing changes, and advanced wound management for acute and chronic wounds by experienced registered nurses.",
     icon: "HandHelping",
     color: "orange",
     order: 2,
     show_on_home: true
   },
   {
-    title: "Life Stage Transition",
-    description: "Support during major life changes, helping you navigate new situations and develop independence at your own pace.",
-    icon: "ArrowRightLeft",
+    title: "Medication Management",
+    description: "Comprehensive medication administration, Webster pack management, insulin administration, subcutaneous and intramuscular injections, and medication education.",
+    icon: "UserCheck",
     color: "teal",
     order: 3,
     show_on_home: true
   },
   {
-    title: "Travel & Transport",
-    description: "Safe and reliable transport to appointments, social activities, shopping, and community events.",
-    icon: "Car",
+    title: "Bowel & Continence Care",
+    description: "Professional support with bowel management programs, continence care, catheter care, stoma management, and personal hygiene assistance.",
+    icon: "HandHelping",
     color: "orange",
     order: 4,
     show_on_home: true
   },
   {
-    title: "Daily Tasks & Shared Living",
-    description: "Help with household tasks, meal preparation, cleaning, and creating a comfortable living environment.",
-    icon: "Home",
+    title: "Hospital to Home Transition",
+    description: "Seamless discharge planning and post-hospital support to ensure safe transition from hospital to home with comprehensive nursing care.",
+    icon: "ArrowRightLeft",
     color: "teal",
     order: 5,
     show_on_home: true
   },
   {
-    title: "Support Coordination",
-    description: "Expert guidance to understand and use your NDIS plan effectively, connecting you with the right services.",
-    icon: "UserCheck",
+    title: "Personal Care & Daily Living",
+    description: "Assistance with showering, dressing, grooming, toileting, mobility support, and other activities of daily living to maintain dignity and independence.",
+    icon: "Home",
     color: "orange",
     order: 6,
     show_on_home: true
   },
   {
-    title: "Life Skills Development",
-    description: "Building practical skills for greater independence in daily living, social situations, and community participation.",
-    icon: "GraduationCap",
+    title: "Support Coordination",
+    description: "Expert NDIS plan management, service provider coordination, goal setting, and navigation of the NDIS system to maximize your plan benefits.",
+    icon: "Compass",
     color: "teal",
     order: 7,
     show_on_home: false
   },
   {
-    title: "Meal Preparation",
-    description: "Nutritious meal planning and preparation tailored to dietary requirements and personal preferences.",
-    icon: "Utensils",
+    title: "Respite Care",
+    description: "Flexible in-home and community-based respite care providing temporary relief for families and primary carers, including overnight and weekend support.",
+    icon: "UsersRound",
     color: "orange",
     order: 8,
     show_on_home: false
   },
   {
-    title: "Group & Centre Activities",
-    description: "Engaging social and recreational programs that promote connection, skill development, and community involvement.",
-    icon: "UsersRound",
+    title: "Travel & Transport",
+    description: "Safe and reliable transport to medical appointments, therapy sessions, community activities, social events, and shopping with trained support workers.",
+    icon: "Car",
     color: "teal",
     order: 9,
     show_on_home: false
   },
   {
-    title: "Community Access",
-    description: "Support to participate in community activities, develop social connections, and explore your local area.",
-    icon: "MapPin",
+    title: "Household Tasks & Cleaning",
+    description: "Support with light housework, laundry, meal preparation, shopping, and maintaining a clean and safe living environment.",
+    icon: "Home",
     color: "orange",
     order: 10,
     show_on_home: false
   },
   {
-    title: "Development of Life Skills",
-    description: "Personalized programs to build confidence, independence, and skills for achieving your goals.",
-    icon: "Compass",
+    title: "Life Skills Development",
+    description: "Building practical skills for independent living including budgeting, cooking, public transport use, and community participation.",
+    icon: "GraduationCap",
     color: "teal",
     order: 11,
+    show_on_home: false
+  },
+  {
+    title: "Community Access & Participation",
+    description: "Support to engage in community activities, social events, recreational programs, and build meaningful social connections.",
+    icon: "MapPin",
+    color: "orange",
+    order: 12,
+    show_on_home: false
+  },
+  {
+    title: "Therapeutic Supports",
+    description: "Coordination and support for allied health services including physiotherapy, occupational therapy, speech therapy, and psychology services.",
+    icon: "Compass",
+    color: "teal",
+    order: 13,
+    show_on_home: false
+  },
+  {
+    title: "Behavioral Support",
+    description: "Positive behavior support strategies and implementation for participants with complex behavioral needs in collaboration with behavior support practitioners.",
+    icon: "UsersRound",
+    color: "orange",
+    order: 14,
+    show_on_home: false
+  },
+  {
+    title: "Palliative & End of Life Care",
+    description: "Compassionate nursing care and support for participants with life-limiting conditions, focusing on comfort, dignity, and quality of life.",
+    icon: "HandHelping",
+    color: "teal",
+    order: 15,
     show_on_home: false
   }
 ];
