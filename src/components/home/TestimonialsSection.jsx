@@ -24,8 +24,8 @@ export default function TestimonialsSection() {
           </h2>
         </div>
 
-        <div className="max-w-3xl mx-auto relative">
-          <div className="absolute -top-6 left-8 text-teal-100">
+        <div className="max-w-3xl mx-auto relative px-4">
+          <div className="absolute -top-6 left-8 text-teal-100 hidden sm:block">
             <Quote className="w-20 h-20" />
           </div>
 
@@ -36,50 +36,50 @@ export default function TestimonialsSection() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -30 }}
               transition={{ duration: 0.3 }}
-              className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 sm:p-12 text-center relative"
+              className="bg-white rounded-3xl shadow-lg border border-gray-100 p-6 sm:p-12 text-center relative"
             >
-              <div className="flex justify-center gap-1 mb-6">
+              <div className="flex justify-center gap-1 mb-4 sm:mb-6">
                 {Array.from({ length: testimonials[current].rating || 5 }).map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-orange-400 text-orange-400" />
+                  <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-orange-400 text-orange-400" />
                 ))}
               </div>
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed italic">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed italic">
                 "{testimonials[current].text}"
               </p>
-              <div className="mt-8">
-                <div className="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center text-white font-bold text-xl">
+              <div className="mt-6 sm:mt-8">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 mx-auto rounded-full bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center text-white font-bold text-lg sm:text-xl">
                   {testimonials[current].name[0]}
                 </div>
-                <div className="mt-3 font-bold text-gray-900">{testimonials[current].name}</div>
-                <div className="text-sm text-gray-400">{testimonials[current].role}</div>
+                <div className="mt-3 font-bold text-gray-900 text-sm sm:text-base">{testimonials[current].name}</div>
+                <div className="text-xs sm:text-sm text-gray-400">{testimonials[current].role}</div>
               </div>
             </motion.div>
           </AnimatePresence>
 
           {/* Nav */}
-          <div className="flex justify-center gap-3 mt-8">
+          <div className="flex justify-center gap-2 sm:gap-3 mt-6 sm:mt-8">
             <button
               onClick={prev}
-              className="w-11 h-11 rounded-full border border-gray-200 hover:bg-teal-50 hover:border-teal-200 flex items-center justify-center transition-all"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-gray-200 hover:bg-teal-50 hover:border-teal-200 flex items-center justify-center transition-all"
             >
-              <ChevronLeft className="w-5 h-5 text-gray-600" />
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
             </button>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 sm:gap-2">
               {testimonials.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setCurrent(i)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all ${
-                    i === current ? "bg-teal-600 w-7" : "bg-gray-300"
+                  className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all ${
+                    i === current ? "bg-teal-600 w-6 sm:w-7" : "bg-gray-300"
                   }`}
                 />
               ))}
             </div>
             <button
               onClick={next}
-              className="w-11 h-11 rounded-full border border-gray-200 hover:bg-teal-50 hover:border-teal-200 flex items-center justify-center transition-all"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-gray-200 hover:bg-teal-50 hover:border-teal-200 flex items-center justify-center transition-all"
             >
-              <ChevronRight className="w-5 h-5 text-gray-600" />
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
             </button>
           </div>
         </div>
