@@ -77,8 +77,8 @@ export default function About() {
 
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700&h=500&fit=crop"
-                  alt="Healthcare professional" className="bg-slate-900 w-full h-[450px] object-contain" />
+                  src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=700&h=500&fit=crop"
+                  alt="Nurse in scrubs with stethoscope" className="bg-slate-900 w-full h-[450px] object-contain" />
 
 
               </div>
