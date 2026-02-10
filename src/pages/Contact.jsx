@@ -53,21 +53,6 @@ export default function Contact() {
         message: form.message,
         status: "new"
       });
-
-      // Send email notification
-      await base44.integrations.Core.SendEmail({
-        to: "holisticndiscare@gmail.com",
-        subject: `New Contact Form Submission - ${form.service || 'General Inquiry'}`,
-        body: `
-          <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${form.name}</p>
-          <p><strong>Email:</strong> ${form.email}</p>
-          <p><strong>Phone:</strong> ${form.phone || 'Not provided'}</p>
-          <p><strong>Service Interested In:</strong> ${form.service || 'Not specified'}</p>
-          <p><strong>Message:</strong></p>
-          <p>${form.message}</p>
-        `
-      });
       
       setSending(false);
       setSent(true);
