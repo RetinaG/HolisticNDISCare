@@ -82,17 +82,6 @@ export default function About() {
                   className="w-full h-[450px] object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-5 border">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center">
-                    <Award className="w-6 h-6 text-teal-600" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-gray-900">10+ Years</div>
-                    <div className="text-sm text-gray-400">Of Excellence</div>
-                  </div>
-                </div>
-              </div>
             </motion.div>
           </div>
         </div>
