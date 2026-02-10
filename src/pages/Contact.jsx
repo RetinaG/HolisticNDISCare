@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
+import { base44 } from "@/api/base44Client";
+import { toast } from "sonner";
 
 
 const CONTACT_INFO = [
@@ -40,11 +42,28 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
-    // Simulate form submission
-    setTimeout(() => {
+    
+    try {
+      await base44.integrations.Core.SendEmail({
+        to: "holisticndiscare@gmail.com",
+        subject: `New Contact Form Submission - ${form.service || 'General Inquiry'}`,
+        body: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${form.name}</p>
+          <p><strong>Email:</strong> ${form.email}</p>
+          <p><strong>Phone:</strong> ${form.phone || 'Not provided'}</p>
+          <p><strong>Service Interested In:</strong> ${form.service || 'Not specified'}</p>
+          <p><strong>Message:</strong></p>
+          <p>${form.message}</p>
+        `
+      });
+      
       setSending(false);
       setSent(true);
-    }, 1000);
+    } catch (error) {
+      setSending(false);
+      toast.error("Failed to send message. Please try again or call us directly.");
+    }
   };
 
   return (
