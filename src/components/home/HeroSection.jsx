@@ -80,8 +80,8 @@ export default function HeroSection() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&h=600&fit=crop"
-                alt="Community nursing care"
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&h=600&fit=crop"
+                alt="Nurse providing care to patient at home"
                 className="w-full h-[400px] sm:h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-teal-900/40 to-transparent" />
