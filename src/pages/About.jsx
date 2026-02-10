@@ -77,7 +77,7 @@ export default function About() {
             >
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700&h=500&fit=crop"
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698816c8974c10bb3e401113/d1a36fc73_file_00000000a64471fa9e257adeedfb0c72.png"
                   alt="Healthcare professional"
                   className="w-full h-[450px] object-cover"
                 />
