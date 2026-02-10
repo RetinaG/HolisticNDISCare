@@ -73,7 +73,10 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative"
+              <img
+  src="..."
+  alt="Healthcare professional"
+  className="w-full h-[450px] object-contain bg-gray-50"
             >
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img
