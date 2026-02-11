@@ -5,10 +5,15 @@ const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
 Deno.serve(async (req) => {
     try {
-        const { name, email, phone, service, message } = await req.json();
+        const body = await req.json();
+        console.log('Received request:', body);
+        
+        const { name, email, phone, service, message } = body;
+        
         const base44 = createClientFromRequest(req);
 
         // Save to database (using service role for public access)
+        console.log('Saving to database...');
         await base44.asServiceRole.entities.ContactInquiry.create({
             name,
             email,
@@ -17,8 +22,10 @@ Deno.serve(async (req) => {
             message,
             status: "new"
         });
+        console.log('Saved to database');
 
         // Send email notification
+        console.log('Sending email...');
         await resend.emails.send({
             from: 'onboarding@resend.dev',
             to: 'holisticndiscare@gmail.com',
@@ -33,10 +40,17 @@ Deno.serve(async (req) => {
                 <p>${message}</p>
             `
         });
+        console.log('Email sent');
 
-        return Response.json({ success: true });
+        return new Response(JSON.stringify({ success: true }), {
+            status: 200,
+            headers: { 'Content-Type': 'application/json' }
+        });
     } catch (error) {
-        console.error('Error:', error);
-        return Response.json({ error: error.message }, { status: 500 });
+        console.error('Function error:', error);
+        return new Response(JSON.stringify({ success: false, error: error.message }), {
+            status: 500,
+            headers: { 'Content-Type': 'application/json' }
+        });
     }
 });
