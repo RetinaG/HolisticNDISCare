@@ -8,8 +8,8 @@ Deno.serve(async (req) => {
         const base44 = createClientFromRequest(req);
         const { name, email, phone, service, message } = await req.json();
 
-        // Save to database
-        await base44.entities.ContactInquiry.create({
+        // Save to database (using service role for public access)
+        await base44.asServiceRole.entities.ContactInquiry.create({
             name,
             email,
             phone,
