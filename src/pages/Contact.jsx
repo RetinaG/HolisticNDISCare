@@ -44,6 +44,7 @@ export default function Contact() {
     setSending(true);
     
     try {
+      console.log('Submitting form with data:', form);
       const response = await base44.functions.invoke('sendReferralEmail', {
         name: form.name,
         email: form.email,
@@ -52,7 +53,10 @@ export default function Contact() {
         message: form.message
       });
       
+      console.log('Response:', response);
+      
       if (response.data.success) {
+        toast.success("Message sent successfully!");
         setSending(false);
         setSent(true);
         setForm({ name: "", email: "", phone: "", service: "", message: "" });
@@ -60,9 +64,9 @@ export default function Contact() {
         throw new Error('Submission failed');
       }
     } catch (error) {
+      console.error('Submission error:', error);
       setSending(false);
       toast.error("Failed to send message. Please try again or call us directly.");
-      console.error(error);
     }
   };
 
