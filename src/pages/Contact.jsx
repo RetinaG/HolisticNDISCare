@@ -41,6 +41,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log('Form submitted!', form);
     
     if (!form.name || !form.email || !form.message) {
       toast.error("Please fill in all required fields");
@@ -48,6 +49,7 @@ export default function Contact() {
     }
     
     setSending(true);
+    console.log('Calling backend function...');
     
     try {
       const response = await base44.functions.invoke('sendReferralEmail', {
@@ -58,6 +60,7 @@ export default function Contact() {
         message: form.message
       });
       
+      console.log('Response received:', response);
       toast.success("Message sent successfully!");
       setSent(true);
       setForm({ name: "", email: "", phone: "", service: "", message: "" });
@@ -66,6 +69,7 @@ export default function Contact() {
       toast.error("Failed to send message. Please try again or call us directly.");
     } finally {
       setSending(false);
+      console.log('Done');
     }
   };
 
