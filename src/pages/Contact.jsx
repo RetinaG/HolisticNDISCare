@@ -41,14 +41,20 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if (!form.name || !form.email || !form.message) {
+      toast.error("Please fill in all required fields");
+      return;
+    }
+    
     setSending(true);
     
     try {
       const response = await base44.functions.invoke('sendReferralEmail', {
         name: form.name,
         email: form.email,
-        phone: form.phone,
-        service: form.service,
+        phone: form.phone || "",
+        service: form.service || "Other",
         message: form.message
       });
       
@@ -60,8 +66,8 @@ export default function Contact() {
         toast.error("Failed to send message. Please try again or call us directly.");
       }
     } catch (error) {
-      console.error('Error:', error);
-      toast.error("Failed to send message. Please try again or call us directly.");
+      console.error('Submission error:', error);
+      toast.error(`Error: ${error.message || 'Failed to send message'}`);
     } finally {
       setSending(false);
     }
