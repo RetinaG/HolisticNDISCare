@@ -35,6 +35,8 @@ export default function ContactForm() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
 
+  console.log('Base44 client initialized:', base44);
+
   const handleChange = (field, value) =>
     setForm((prev) => ({ ...prev, [field]: value }));
 
