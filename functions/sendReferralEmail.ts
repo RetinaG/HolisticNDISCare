@@ -5,8 +5,8 @@ const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
 Deno.serve(async (req) => {
     try {
-        const base44 = createClientFromRequest(req);
         const { name, email, phone, service, message } = await req.json();
+        const base44 = createClientFromRequest(req);
 
         // Save to database (using service role for public access)
         await base44.asServiceRole.entities.ContactInquiry.create({
