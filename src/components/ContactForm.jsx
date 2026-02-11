@@ -55,6 +55,8 @@ export default function ContactForm() {
       // Ensure Select has a default value
       const serviceValue = form.service || "Other";
 
+      console.log("Calling function with:", { name: form.name, email: form.email, phone: form.phone, service: serviceValue });
+
       const response = await base44.functions.invoke("sendReferralEmail", {
         name: form.name,
         email: form.email,
@@ -63,22 +65,30 @@ export default function ContactForm() {
         message: form.message,
       });
 
-      console.log("Base44 response:", response);
+      console.log("Function response received:", response);
+      console.log("Response status:", response?.status);
+      console.log("Response data:", response?.data);
       
-      // Always show success and reset form
-      toast.success("✓ Message sent successfully! We'll get back to you soon.", {
-        duration: 5000,
-        position: 'top-center'
-      });
-      
-      setSent(true);
-      setTimeout(() => {
+      // Check if the response indicates success
+      if (response?.status === 200 || response?.data?.success !== false) {
+        console.log("Success - showing confirmation");
+        toast.success("✓ Message sent successfully! We'll get back to you soon.", {
+          duration: 5000,
+          position: 'top-center'
+        });
+        
+        setSent(true);
         setForm({ name: "", email: "", phone: "", service: "", message: "" });
-      }, 100);
+      } else {
+        console.log("Function returned failure");
+        toast.error("Failed to send message. Please try again.");
+      }
     } catch (error) {
       console.error("Submission error:", error);
-      toast.error("Error sending message. Check console for details.");
+      console.error("Error details:", error.message, error.stack);
+      toast.error("Error sending message: " + error.message);
     } finally {
+      console.log("Setting sending to false");
       setSending(false);
     }
   };
