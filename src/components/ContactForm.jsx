@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { toast } from "sonner";
-import { base44 } from "@/api/base44Client";
+import { createClient } from "@base44/sdk";
+
+// Initialize client for external hosting
+const base44 = createClient({
+  appId: "698816c8974c10bb3e401113",
+  baseURL: "https://app.base44.com"
+});
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
