@@ -65,12 +65,16 @@ export default function ContactForm() {
 
       console.log("Base44 response:", response);
       
+      // Always show success and reset form
       toast.success("✓ Message sent successfully! We'll get back to you soon.", {
         duration: 5000,
         position: 'top-center'
       });
-      setForm({ name: "", email: "", phone: "", service: "", message: "" });
+      
       setSent(true);
+      setTimeout(() => {
+        setForm({ name: "", email: "", phone: "", service: "", message: "" });
+      }, 100);
     } catch (error) {
       console.error("Submission error:", error);
       toast.error("Error sending message. Check console for details.");
