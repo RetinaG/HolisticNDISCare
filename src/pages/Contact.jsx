@@ -44,14 +44,12 @@ export default function Contact() {
     setSending(true);
     
     try {
-      // Save to database
-      await base44.entities.ContactInquiry.create({
+      await base44.functions.invoke('sendReferralEmail', {
         name: form.name,
         email: form.email,
         phone: form.phone,
-        service: form.service || "Other",
-        message: form.message,
-        status: "new"
+        service: form.service,
+        message: form.message
       });
       
       setSending(false);
