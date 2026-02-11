@@ -58,16 +58,12 @@ export default function Contact() {
         message: form.message
       });
       
-      if (response?.data?.success) {
-        toast.success("Message sent successfully!");
-        setSent(true);
-        setForm({ name: "", email: "", phone: "", service: "", message: "" });
-      } else {
-        toast.error("Failed to send message. Please try again or call us directly.");
-      }
+      toast.success("Message sent successfully!");
+      setSent(true);
+      setForm({ name: "", email: "", phone: "", service: "", message: "" });
     } catch (error) {
       console.error('Submission error:', error);
-      toast.error(`Error: ${error.message || 'Failed to send message'}`);
+      toast.error("Failed to send message. Please try again or call us directly.");
     } finally {
       setSending(false);
     }
