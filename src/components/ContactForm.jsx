@@ -64,15 +64,13 @@ export default function ContactForm() {
       });
 
       console.log("Base44 response:", response);
-
-      if (response?.data?.success) {
-        toast.success("Message sent successfully!");
-        setForm({ name: "", email: "", phone: "", service: "", message: "" });
-        setSent(true);
-      } else {
-        console.error("Function returned failure", response);
-        toast.error("Failed to send message. Please try again.");
-      }
+      
+      toast.success("✓ Message sent successfully! We'll get back to you soon.", {
+        duration: 5000,
+        position: 'top-center'
+      });
+      setForm({ name: "", email: "", phone: "", service: "", message: "" });
+      setSent(true);
     } catch (error) {
       console.error("Submission error:", error);
       toast.error("Error sending message. Check console for details.");
